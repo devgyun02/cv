@@ -1,5 +1,5 @@
 module.exports = {
-  name: '정민균',
+  name: '정 민균',
   title: 'Poet, playwright and actor',
   facts: {
     'Residence': '</i>South Korea</a>',
