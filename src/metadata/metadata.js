@@ -2,6 +2,7 @@ module.exports = {
   name: '정민균',
   title: 'Poet, playwright and actor',
   facts: {
+<<<<<<< HEAD
     'Residence': '<a href="https://www.google.com/maps/place/London,+UK/@51.5285582,-0.2416814,11z/data=!3m1!4b1!4m5!3m4!1s0x47d8a00baf21de75:0x52963a5addd52a99!8m2!3d51.5072178!4d-0.1275862"><i class="fa fa-home fact-icon"></i>London</a>',
     'Wiki': `<a href="https://en.wikipedia.org/wiki/William_Shakespeare">
                   <i class="fa-brands fa-wikipedia-w fact-icon"></i>William_Shakespeare
@@ -22,6 +23,21 @@ module.exports = {
     ['Directing', 80],
     ['Literature', 100],
     ['Influence', 100],
+=======
+    'Residence': '</i>South Korea</a>',
+    'Email': '<a href="devgyun@gmail.com"><i class="fa fa-envelope fact-icon"></i>wil64@yahoo.com</a>'
+  },
+  skills: [
+    ['JavaScript'],
+    ['C++'],
+    ['Python'],
+    ['React'],
+    ['TypeScript'],
+    ['OpenCV'],
+    ['TCP/IP'],
+    ['Node.js'],
+    ['MYSQL'],
+>>>>>>> 28d72c8 (260330)
   ],
   positions: [
     {
