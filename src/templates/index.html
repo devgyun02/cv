@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ name }}. {{ title }}</title>
+    <title>{{ name }} - {{ title }}</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,7 @@
 </head>
 <body>
 <div class="container page">
+    <!-- 헤더 / 프로필 -->
     <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
         <div class="row">
             <div class="col-print-6 col-12 col-md-4 d-flex justify-content-between flex-column">
@@ -27,10 +28,8 @@
                         <time datetime="{{ buildinfo.date }}" class="small">Last update: {{ updated }}</time>
                     </p>
                     <p>
-                        <span class="screen"><a href="{{ pdfFileName }}"><i class="far fa-file-pdf"></i>Download PDF version</a></span>
-                        <span class="print">Up-to-date version of CV is available at <a href="{{ baseUrl }}"
-                                                                                        class="text-nowrap"><i
-                            class="fab fa-github" aria-hidden="true"></i>{{ baseUrl }}</a></span>
+                        <span class="screen"><a href="{{ pdfFileName }}"><i class="far fa-file-pdf"></i> Download PDF version</a></span>
+                        <span class="print">Up-to-date version of CV is available at <a href="{{ baseUrl }}" class="text-nowrap"><i class="fab fa-github" aria-hidden="true"></i> {{ baseUrl }}</a></span>
                     </p>
                 </div>
             </div>
@@ -50,71 +49,73 @@
         </div>
     </div>
 
+    <!-- 스킬 -->
     <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
         <h3 class="h2 screen mb-4">Skills</h3>
         <div class="row align-items-center">
             {{#each skills}}
-            <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
-                <small>{{ this.[0] }}</small>
-            </div>
-            <div class="col-print-1 col-3 col-md-2 col-lg-1">
-                <div class="skills">
-                    
-                </div>
+            <div class="col-print-2 col-4 col-md-3 col-lg-2 my-1">
+                <span class="badge bg-secondary fs-6">{{ this.[0] }}</span>
             </div>
             {{/each}}
         </div>
     </div>
 
+    <!-- 프로젝트 (Projects) -->
     <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
-        English poet, playwright and actor, widely regarded as the greatest writer in the English language
-        and the world's pre-eminent dramatist. Often called England's national poet and the "Bard of Avon".
-        My extant work is including collaborations, consist of approximately 38 plays, 154 sonnets,
-        two long narrative poems and a few other verses, some of uncertain authorship.
-    </div>
-
-    <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
-        <h2 class="mb-4">Professional Experience</h2>
-        {{#each positions}}
+        <h2 class="mb-4">Projects</h2>
+        {{#each projects}}
         <div class="row d-block d-md-flex{{#unless @last}} mb-5{{/unless}}">
-            <div class="col-md-2 pt-1">
+            <div class="col-md-2 pt-1 text-muted">
                 {{ period }}
             </div>
             <div class="col-md-10">
                 <h3 class="fs-4 fw-normal">{{ title }}</h3>
-
+                <p class="text-muted fw-bold mb-2">{{ category }}</p>
                 <div>{{{markdown contents }}}</div>
-
-                <p>
-                    {{#each skills }}
-                    <span class="badge text-body border border-1">{{ this }}</span>
-                    {{/each}}
-                </p>
             </div>
         </div>
         {{/each}}
     </div>
 
+    <!-- 경력 (Experience) -->
+    <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
+        <h2 class="mb-4">Professional Experience</h2>
+        {{#each experience}}
+        <div class="row d-block d-md-flex mb-3">
+            <div class="col-md-2 pt-1 text-muted">
+                {{ period }}
+            </div>
+            <div class="col-md-10">
+                <h3 class="fs-4 fw-normal">{{ company }} - {{ role }}</h3>
+                <div>{{{markdown contents }}}</div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <!-- 학력 (Education) -->
     <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
         <h2 class="mb-4">Education</h2>
-        <div>King Edward VI Grammar School in Stratford-upon-Avon [1571 - 1578]</div>
-    </div>
-
-    <h2 class="mb-4">Additional Experience</h2>
-
-    {{#each experience}}
-    <div class="mb-4">
-        <h3 class="fs-4 fw-normal">{{ header }}</h3>
-
-        {{{markdown contents }}}
-
-        <div>
-            {{#each skills }}
-            <span class="badge text-body border border-1">{{ this }}</span>
-            {{/each}}
+        {{#each education}}
+        <div class="mb-3">
+            <div class="fs-5 fw-bold">{{ institution }} - {{ major }}{{#if program}}{{ program }}{{/if}}</div>
+            <div class="text-muted">{{ period }} ({{ status }})</div>
         </div>
+        {{/each}}
     </div>
-    {{/each}}
+
+    <!-- 수상 (Awards) -->
+    <div>
+        <h2 class="mb-4">Awards</h2>
+        {{#each awards}}
+        <div class="mb-3">
+            <div class="fs-5 fw-bold">{{ title }} - <small class="text-muted">{{ organization }}</small></div>
+            <div><strong>논문명:</strong> {{ paperTitle }}</div>
+            <div class="small text-muted">{{ date }} | {{ details }}</div>
+        </div>
+        {{/each}}
+    </div>
 </div>
 </body>
 </html>
