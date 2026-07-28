@@ -21,14 +21,13 @@ module.exports = {
     ['XGBoost'],
     ['Streamlit']
   ],
-  // [Professional Experience 영역에 출력될 프로젝트들]
   positions: [
     {
       title: 'CareConnect (맞벌이 부부 및 지역 사회 돌봄 자원 실시간 매칭 안드로이드 & AI 백엔드 플랫폼)',
       period: '2026',
       skills: ['Kotlin', 'Jetpack Compose', 'Node.js', 'Express.js', 'MySQL', 'Gemini 2.5 Flash'],
       contents: `
-- **비전 및 문제 해결:** 퇴근 지연 등 부모의 위기 상황 시 실시간 지도 매칭 및 '긴급 공지' 기능 제공
+- **비전 및 문제 해결:** 퇴근 지연 등 부모의 위기 상황 시 실시간 지도 매칭 및 '긴급 공지' 기능 제안
 - **AI 태그 추출:** Google Gemini 2.5 Flash 연동으로 빠른 검색용 핵심 키워드/태그 자동 추출
 - **부모/구직자 매칭:** 구인 공고/프로필 CRUD, 조건 명시, 지도 기반 탐지 및 즉시 전화 연결(ACTION_DIAL)
 - **안드로이드 클라이언트:** Kotlin 기반 Jetpack Compose, Material 3, ViewModel, Coroutines 비동기 상태 관리
@@ -47,7 +46,6 @@ module.exports = {
 `
     }
   ],
-  // [Additional Experience 영역에 출력될 학력, 경력, 수상 내용]
   experience: [
     {
       header: 'Professional Experience (경력)',

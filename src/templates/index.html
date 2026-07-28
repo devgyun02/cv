@@ -25,7 +25,7 @@
                 </div>
                 <div>
                     <p>
-                        <time datetime="{{ buildinfo.date }}" class="small">Last update: {{ updated }}</time>
+                        <time datetime="{{ updated }}" class="small">Last update: {{ updated }}</time>
                     </p>
                     <p>
                         <span class="screen"><a href="{{ pdfFileName }}"><i class="far fa-file-pdf"></i> Download PDF version</a></span>
@@ -64,55 +64,36 @@
     <!-- 프로젝트 (Projects) -->
     <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
         <h2 class="mb-4">Projects</h2>
-        {{#each projects}}
+        {{#each positions}}
         <div class="row d-block d-md-flex mb-4">
             <div class="col-md-2 pt-1 text-muted">
                 {{ period }}
             </div>
             <div class="col-md-10">
                 <h3 class="fs-4 fw-normal mb-1">{{ title }}</h3>
-                <p class="text-muted fw-bold mb-2">{{ category }}</p>
-                <div style="white-space: pre-line;">{{{ contents }}}</div>
+                <div style="white-space: pre-line;" class="mb-2">{{{ contents }}}</div>
+                <div>
+                    {{#each skills}}
+                    <span class="badge text-body border border-1">{{ this }}</span>
+                    {{/each}}
+                </div>
             </div>
         </div>
         {{/each}}
     </div>
 
-    <!-- 경력 (Experience) -->
+    <!-- 경력, 학력, 수상 (Experience & Education) -->
     <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
-        <h2 class="mb-4">Professional Experience</h2>
+        <h2 class="mb-4">Experience & Education</h2>
         {{#each experience}}
-        <div class="row d-block d-md-flex mb-3">
-            <div class="col-md-2 pt-1 text-muted">
-                {{ period }}
+        <div class="mb-4">
+            <h3 class="fs-4 fw-normal">{{ header }}</h3>
+            <div style="white-space: pre-line;" class="mb-2">{{{ contents }}}</div>
+            <div>
+                {{#each skills}}
+                <span class="badge text-body border border-1">{{ this }}</span>
+                {{/each}}
             </div>
-            <div class="col-md-10">
-                <h3 class="fs-4 fw-normal">{{ company }} - {{ role }}</h3>
-                <div style="white-space: pre-line;">{{{ contents }}}</div>
-            </div>
-        </div>
-        {{/each}}
-    </div>
-
-    <!-- 학력 (Education) -->
-    <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
-        <h2 class="mb-4">Education</h2>
-        {{#each education}}
-        <div class="mb-3">
-            <div class="fs-5 fw-bold">{{ institution }} - {{ major }}{{ program }}</div>
-            <div class="text-muted">{{ period }} ({{ status }})</div>
-        </div>
-        {{/each}}
-    </div>
-
-    <!-- 수상 (Awards) -->
-    <div>
-        <h2 class="mb-4">Awards</h2>
-        {{#each awards}}
-        <div class="mb-3">
-            <div class="fs-5 fw-bold">{{ title }} - <small class="text-muted">{{ organization }}</small></div>
-            <div><strong>논문명:</strong> {{ paperTitle }}</div>
-            <div class="small text-muted">{{ date }} | {{ details }}</div>
         </div>
         {{/each}}
     </div>
