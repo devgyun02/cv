@@ -23,6 +23,15 @@ module.exports = {
   ],
   positions: [
     {
+      title: 'uniOn (AI 기반 학내 소모임 추천 매칭 플랫폼)',
+      period: '2026',
+      skills: ['Node.js', 'Express.js', 'Gemini 3.1 Flash Lite', 'PostgreSQL', 'Docker'],
+      contents: `
+- **AI 자기소개서 키워드 추출 파이프라인:** Gemini 3.1 Flash Lite 연동 및 프롬프트 엔지니어링으로 자유 텍스트 내 관심사/성향 키워드 저지연 추출 및 JSON 파싱 구조화
+- **하이브리드 추천 매칭 알고리즘:** Cosine Similarity(회원 평균 벡터 방향성 비교로 활동량 편향 방지)와 Jaccard Similarity(유저-태그 집합 중첩)를 결합한 Final Score 추천 엔진 개발
+`
+    },
+    {
       title: 'CareConnect (맞벌이 부부 및 지역 사회 돌봄 자원 실시간 매칭 안드로이드 & AI 백엔드 플랫폼)',
       period: '2026',
       skills: ['Kotlin', 'Jetpack Compose', 'Node.js', 'Express.js', 'MySQL', 'Gemini 2.5 Flash'],
@@ -49,11 +58,12 @@ module.exports = {
   experience: [
     {
       header: 'Professional Experience (경력)',
-      skills: ['AI/SW Solution', 'Software Development'],
+      skills: ['TypeScript', 'JavaScript', 'HTML/CSS', 'Software Assistance'],
       contents: `
-**더하지** | 소프트웨어 개발자 (코드: 133)
+**더하지** | 개발 보조 (아르바이트)
 *2025. 03. 12 ~ 재직 중*
-- 소프트웨어 개발자로서 AI/SW 솔루션 및 시스템 개발 업무 수행.
+- 실무 주력 언어인 TypeScript 기반 웹 UI/컴포넌트 개발 환경 학습 및 화면 구현 보조 (TypeScript 68.2%, HTML 27%, CSS 1.9%)
+- JavaScript 기반 스크립트 작성 및 로직 수정을 통해 기존 시스템 모듈의 유지보수 및 개발 업무 지원 (JavaScript 99.2%)
 `
     },
     {
