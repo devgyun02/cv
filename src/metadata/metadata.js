@@ -87,7 +87,6 @@ module.exports = {
 - Z-score 슬라이더 기반 동적 임계값 조정 및 스마트 방화벽 ACL 자동 배포 시뮬레이션 기능 제공
 - AUC-ROC, PR-AUC, Confusion Matrix 등 학술 표준 지표 기반 종합 성능 검증 리포트 구성
 `
-    },
-
+    }
   ]
 };
