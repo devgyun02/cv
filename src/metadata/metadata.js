@@ -35,7 +35,7 @@ module.exports = {
 `
     },
     {
-      title: 'AIS (AI-based Industrial Security - 산업 인프라 실시간 위협 탐지 및 이상 탐지 파이프라인)',
+      title: 'AIS (Anomaly Intrusion Detection System - 산업 인프라 실시간 위협 탐지 및 이상 탐지 파이프라인)',
       period: '2026',
       skills: ['Python', 'PyTorch', 'Streamlit', 'XGBoost', 'Plotly', 'CIC-IDS2018'],
       contents: `
@@ -62,12 +62,12 @@ module.exports = {
   experience: [
     {
       header: 'Professional Experience (경력)',
-      skills: ['TypeScript', 'JavaScript', 'HTML/CSS', 'Software Assistance'],
+      skills: ['TypeScript', 'JavaScript', 'Tailwind CSS', 'Software Assistance'],
       contents: `
 **더하지** | 개발 보조 (아르바이트)
 *2025. 03. 12 ~ 재직 중*
-- 실무 주력 언어인 TypeScript 기반 웹 UI/컴포넌트 개발 환경 학습 및 화면 구현 보조 (TypeScript 68.2%, HTML 27%, CSS 1.9%)
-- JavaScript 기반 스크립트 작성 및 로직 수정을 통해 기존 시스템 모듈의 유지보수 및 개발 업무 지원 (JavaScript 99.2%)
+- 실무 주력 언어인 TypeScript 기반 웹 UI/컴포넌트 개발 환경 학습 및 화면 구현 보조
+- JavaScript 기반 스크립트 작성 및 로직 수정을 통해 기존 시스템 모듈의 유지보수 및 개발 업무 지원
 `
     },
     {
